@@ -7,15 +7,21 @@ public class BaseItem : MonoBehaviour
     [SerializeField] private string itemName;
     [SerializeField] private bool isReady;
     [SerializeField] private bool isOnConveyor;
+    [SerializeField] private float conveyorSpeed;
 
     [SerializeField] private Rigidbody rb;
 
+    private void Start()
+    {
+        Vector3 randomDirection = Random.insideUnitSphere.normalized;
+        rb.AddForce(randomDirection * startImpulse, ForceMode.Impulse);
+    }
     private void Update()
     {
         if(isOnConveyor)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
-            rb.linearVelocity = new Vector3(0, 0, 2);
+            rb.linearVelocity = new Vector3(0, 0, conveyorSpeed);
         }
         else
         {
