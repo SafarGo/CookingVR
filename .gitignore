@@ -1,25 +1,8 @@
-# Created by https://www.toptal.com/developers/gitignore/api/unity,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=unity,git
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
-
-### Unity ###
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+#
+.utmp/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -27,6 +10,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+*.log
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -77,6 +61,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.unitypackage.meta
 *.app
 
 # Crashlytics generated file
@@ -88,5 +73,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# End of https://www.toptal.com/developers/gitignore/api/unity,git
