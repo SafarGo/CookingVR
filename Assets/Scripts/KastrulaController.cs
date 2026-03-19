@@ -19,8 +19,9 @@ public class KastrulaController : BaseItem
     public bool isReadyToBoil;
     private GameObject newObj;
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
         BoilRecipe recipe = recipes.FirstOrDefault(r => r.inputTag == other.tag);
         if (recipe.outputPrefab == null) return;
 

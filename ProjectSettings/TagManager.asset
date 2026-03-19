@@ -15,6 +15,7 @@ TagManager:
   - Zhelatin
   - Pelmeni
   - EndOfConveyor
+  - Magnit
   layers:
   - Default
   - TransparentFX

@@ -23,7 +23,7 @@ public class BaseItem : MonoBehaviour
         OnMagnit();
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (isMagnitizm)
         {
@@ -37,10 +37,6 @@ public class BaseItem : MonoBehaviour
                 isOnMagnit = true;
             }
         }
-        if (other.CompareTag("Kastrula") && transform.tag != "Kastrula")
-        {
-            ///TODO: Добавить взаимодействие с кастрюлей
-        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -48,6 +44,10 @@ public class BaseItem : MonoBehaviour
         if (other.CompareTag("ConveyorLine"))
         {
             isOnConveyor = false;
+        }
+        if (other.CompareTag("Magnit"))
+        {
+            isOnMagnit = false;
         }
     }
 
@@ -59,9 +59,11 @@ public class BaseItem : MonoBehaviour
             rb.linearVelocity = new Vector3(0, 0, conveyorSpeed);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        else if (isOnMagnit && !!GameManager.instance.isDebaf)
+        else if (isOnMagnit && !GameManager.instance.isDebaf)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            Debug.Log("isMagnitizm!");
         }
         else
         {
