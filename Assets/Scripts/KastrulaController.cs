@@ -15,6 +15,7 @@ public class KastrulaController : BaseItem
 {
     [SerializeField] private Slider slider;
     [SerializeField] private float timeToBoil;
+    [SerializeField] private bool isOnPlita;
     [SerializeField] private List<BoilRecipe> recipes;
     public bool isReadyToBoil;
     private GameObject newObj;
@@ -22,33 +23,49 @@ public class KastrulaController : BaseItem
     protected override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
+        if(other.CompareTag("Magnit"))
+        {
+            isOnPlita = true;
+        }
         BoilRecipe recipe = recipes.FirstOrDefault(r => r.inputTag == other.tag);
         if (recipe.outputPrefab == null) return;
 
         isReadyToBoil = false;
         newObj = recipe.outputPrefab;
-        Destroy(other.gameObject);
-        StartCoroutine(Boil());
+        StartCoroutine(Boil(other.gameObject));
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Magnit"))
+        {
+            isOnPlita = false;
+        }
+    }
+
 
     private void Update()
     {
         OnMagnit();
     }
-    IEnumerator Boil()
+    IEnumerator Boil(GameObject other)
     {
-        slider.gameObject.SetActive(true);
-        float timer = 0;
-        while (timer < timeToBoil)
+        if (isOnPlita)
         {
-            timer += Time.deltaTime;
-            slider.value = timer / timeToBoil;
-            yield return null;
+            Destroy(other);
+            slider.gameObject.SetActive(true);
+            float timer = 0;
+            while (timer < timeToBoil)
+            {
+                timer += Time.deltaTime;
+                slider.value = timer / timeToBoil;
+                yield return null;
+            }
+            Debug.Log("Boiled");
+            isReadyToBoil = true;
+            slider.gameObject.SetActive(false);
+            Instantiate(newObj, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            newObj = null;
         }
-        Debug.Log("Boiled");
-        isReadyToBoil = true;
-        slider.gameObject.SetActive(false);
-        Instantiate(newObj, transform.position + new Vector3(0,1,0), Quaternion.identity);
-        newObj = null;
     }
 }
