@@ -7,6 +7,14 @@ TagManager:
   - ConveyorLine
   - Slice
   - Slicer
+  - DangerZone
+  - Kastrula
+  - Tomato
+  - Picul
+  - Farsh
+  - Zhelatin
+  - Pelmeni
+  - EndOfConveyor
   layers:
   - Default
   - TransparentFX
