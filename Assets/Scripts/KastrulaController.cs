@@ -19,6 +19,7 @@ public class KastrulaController : BaseItem
     [SerializeField] private List<BoilRecipe> recipes;
     public bool isReadyToBoil;
     private GameObject newObj;
+    private string currentTag;
 
     protected override void OnTriggerEnter(Collider other)
     {
@@ -32,6 +33,7 @@ public class KastrulaController : BaseItem
 
         isReadyToBoil = false;
         newObj = recipe.outputPrefab;
+        currentTag = other.tag;
         StartCoroutine(Boil(other.gameObject));
     }
 
@@ -50,7 +52,7 @@ public class KastrulaController : BaseItem
     }
     IEnumerator Boil(GameObject other)
     {
-        if (isOnPlita)
+        if (isOnPlita && recipes.Any(r => r.inputTag == currentTag))
         {
             Destroy(other);
             slider.gameObject.SetActive(true);
@@ -66,6 +68,7 @@ public class KastrulaController : BaseItem
             slider.gameObject.SetActive(false);
             Instantiate(newObj, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             newObj = null;
+            currentTag = null;
         }
     }
 }

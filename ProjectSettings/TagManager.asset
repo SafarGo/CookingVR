@@ -16,6 +16,9 @@ TagManager:
   - Pelmeni
   - EndOfConveyor
   - Magnit
+  - Skovoroda
+  - Olives
+  - Podnos
   layers:
   - Default
   - TransparentFX

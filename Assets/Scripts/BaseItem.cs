@@ -6,7 +6,7 @@ public class BaseItem : MonoBehaviour
     [SerializeField] private bool isMagnitizm;
     [SerializeField] private float startImpulse;
     [SerializeField] private string itemName;
-    [SerializeField] private bool isReady;
+    public bool isReady;
     [SerializeField] private bool isOnConveyor;
     [SerializeField] private bool isOnMagnit;
     [SerializeField] private float conveyorSpeed;
@@ -45,10 +45,12 @@ public class BaseItem : MonoBehaviour
         {
             isOnConveyor = false;
         }
-        if (other.CompareTag("Magnit"))
+        else if (other.CompareTag("Magnit"))
         {
             isOnMagnit = false;
+            Debug.Log($"TriggerExit: {other.tag}");
         }
+        
     }
 
     public void OnMagnit()
@@ -61,12 +63,14 @@ public class BaseItem : MonoBehaviour
         }
         else if (isOnMagnit && !GameManager.instance.isDebaf)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
+            rb.isKinematic = true;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             Debug.Log("isMagnitizm!");
         }
         else
         {
+            rb.isKinematic = false;
+            isOnMagnit = false;
             rb.constraints = RigidbodyConstraints.None;
         }
     }

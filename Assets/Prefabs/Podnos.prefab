@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8417712252553119011}
   - component: {fileID: 6352822965123718054}
   - component: {fileID: 308954535300539892}
-  - component: {fileID: 5115185889770504357}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -87,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5115185889770504357
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402356352837794330}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5971565342853800176
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,9 +100,10 @@ GameObject:
   - component: {fileID: 6778431716059673979}
   - component: {fileID: 9048195935081488274}
   - component: {fileID: 4745837694189137124}
+  - component: {fileID: 2973287900544424766}
   m_Layer: 0
   m_Name: Podnos
-  m_TagString: Untagged
+  m_TagString: Podnos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +142,7 @@ MonoBehaviour:
   isOrderReady: 0
   textForname: {fileID: 1792885201671935349}
   rb: {fileID: 6778431716059673979}
+  weight: 0
 --- !u!65 &1763382524089942344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.68977857, y: 0.02767005, z: 0.34089306}
-  m_Center: {x: 0.0007019192, y: 0.0021485994, z: 0.0012822896}
+  m_Size: {x: 0.34129292, y: 0.02767005, z: 0.69332194}
+  m_Center: {x: 0.003080815, y: 0.0021485994, z: 0.002174005}
 --- !u!54 &6778431716059673979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -353,6 +333,27 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!65 &2973287900544424766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971565342853800176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15667999, y: 0.10616591, z: 0.26240885}
+  m_Center: {x: 0.07166001, y: 0.052511092, z: -0.002320528}
 --- !u!1 &6196864080985828813
 GameObject:
   m_ObjectHideFlags: 0

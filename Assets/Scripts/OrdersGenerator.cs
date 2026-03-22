@@ -8,6 +8,7 @@ public struct OrderEntry
 {
     public string orderName;
     public GameObject podnosPrefab;
+    public int orderScore;
     [Range(0f, 100f)] public float weight;
 }
 
@@ -38,6 +39,7 @@ public class OrdersGenerator : MonoBehaviour
         var go = Instantiate(order.podnosPrefab, spawnPoint.position, spawnPoint.rotation);
         go.GetComponent<PodnosController>().SetIsReady(false);
         go.GetComponent<PodnosController>().SetName(order.orderName);
+        go.GetComponent<PodnosController>().SetWeight(order.orderScore);
     }
 
     private OrderEntry GetRandomOrder()
@@ -48,6 +50,7 @@ public class OrdersGenerator : MonoBehaviour
         foreach (var order in orders)
         {
             current += order.weight;
+            GameManager.instance.maxScore += order.orderScore;
             if (random <= current)
                 return order;
         }
