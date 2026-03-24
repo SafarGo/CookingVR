@@ -31,11 +31,6 @@ public class BaseItem : MonoBehaviour
             {
                 isOnConveyor = true;
             }
-
-            else if (other.CompareTag("Magnit"))
-            {
-                isOnMagnit = true;
-            }
         }
     }
 
@@ -45,12 +40,6 @@ public class BaseItem : MonoBehaviour
         {
             isOnConveyor = false;
         }
-        else if (other.CompareTag("Magnit"))
-        {
-            isOnMagnit = false;
-            Debug.Log($"TriggerExit: {other.tag}");
-        }
-        
     }
 
     public void OnMagnit()
@@ -60,12 +49,6 @@ public class BaseItem : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;
             rb.linearVelocity = new Vector3(0, 0, conveyorSpeed);
             transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if (isOnMagnit && !GameManager.instance.isDebaf)
-        {
-            rb.isKinematic = true;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            Debug.Log("isMagnitizm!");
         }
         else
         {

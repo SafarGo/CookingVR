@@ -15,7 +15,7 @@ public class KastrulaController : BaseItem
 {
     [SerializeField] private Slider slider;
     [SerializeField] private float timeToBoil;
-    [SerializeField] private bool isOnPlita;
+    public bool isOnPlita;
     [SerializeField] private List<BoilRecipe> recipes;
     public bool isReadyToBoil;
     private GameObject newObj;

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int score;
     public int maxScore;
     public float timeOfSession;
+    public bool isTrashopened;
 
     public static GameManager instance;
 

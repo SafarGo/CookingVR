@@ -6,6 +6,7 @@ public class DebufController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameManager.instance.isDebaf = true;
+        Destroy(other.gameObject);
         StartCoroutine(DebugDelay());
     }
 

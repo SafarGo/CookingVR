@@ -3,9 +3,9 @@ using UnityEngine.UIElements;
 
 public class VitezhkaController : MonoBehaviour
 {
-    [SerializeField] private float force;
+    [SerializeField] protected float force;
 
-    private void OnTriggerStay(Collider other)
+    protected virtual void OnTriggerStay(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
 
