@@ -9,7 +9,7 @@ public class VitezhkaController : MonoBehaviour
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
 
-        if (rb != null)
+        if (rb != null && !GameManager.instance.isDebaf)
         {
             Vector3 direction = (transform.position - other.transform.position).normalized;
             rb.AddForce(direction * force);
