@@ -49,6 +49,12 @@ public class KastrulaController : BaseItem
     private void Update()
     {
         OnMagnit();
+        if(GameManager.instance.isDebaf)
+        {
+            var rb = gameObject.GetComponent<Rigidbody>();
+            Vector3 randomDirection = Random.insideUnitSphere.normalized;
+            rb.AddForce(randomDirection * 0.05f, ForceMode.Impulse);
+        }
     }
     IEnumerator Boil(GameObject other)
     {
@@ -66,7 +72,7 @@ public class KastrulaController : BaseItem
             Debug.Log("Boiled");
             isReadyToBoil = true;
             slider.gameObject.SetActive(false);
-            Instantiate(newObj, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            Instantiate(newObj, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
             newObj = null;
             currentTag = null;
         }

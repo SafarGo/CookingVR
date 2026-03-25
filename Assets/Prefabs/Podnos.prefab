@@ -234,7 +234,7 @@ MonoBehaviour:
   isReady: 0
   isOnConveyor: 0
   isOnMagnit: 0
-  conveyorSpeed: 0.2
+  conveyorSpeed: 0.1
   rb: {fileID: 6778431716059673979}
 --- !u!114 &4745837694189137124
 MonoBehaviour:

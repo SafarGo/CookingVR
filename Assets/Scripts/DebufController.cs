@@ -5,9 +5,12 @@ public class DebufController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.instance.isDebaf = true;
-        Destroy(other.gameObject);
-        StartCoroutine(DebugDelay());
+        if (!other.gameObject.CompareTag("Slicer"))
+        {
+            GameManager.instance.isDebaf = true;
+            Destroy(other.gameObject);
+            StartCoroutine(DebugDelay());
+        }
     }
 
     IEnumerator DebugDelay()

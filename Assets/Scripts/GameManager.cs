@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int maxScore;
     public float timeOfSession;
     public bool isTrashopened;
+    public List<GameObject> sockets;
 
     public static GameManager instance;
 
@@ -61,6 +63,20 @@ public class GameManager : MonoBehaviour
                 Debug.Log("К сожалению, вы не достигли цели. Попробуйте снова!");
             }
                 enabled = false; // Остановить обновление GameManager
+        }
+        if (isDebaf)
+        {
+            for(int i = 0; i<sockets.Count; i++)
+            {
+                sockets[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < sockets.Count; i++)
+            {
+                sockets[i].SetActive(true);
+            }
         }
     }
 }

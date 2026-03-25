@@ -1,102 +1,90 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5738420012077096723
-GameObject:
+--- !u!1001 &6221775262365237355
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4587986833800402198}
-  - component: {fileID: 5627713250621065269}
-  - component: {fileID: 1198157436892343792}
-  - component: {fileID: 1594559282373364062}
-  - component: {fileID: 8457676020100349373}
-  - component: {fileID: 5543176360117063772}
-  - component: {fileID: 5151936531290374961}
-  m_Layer: 0
-  m_Name: PelmeniUpak
-  m_TagString: Pelmeni
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4587986833800402198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.40047297, y: 0.66709965, z: 0.019362155}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5627713250621065269
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0369867
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2933
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2671
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_Name
+      value: pelmeniReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      propertyPath: m_TagString
+      value: Pelmeni
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 724868656967471988}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4067987021885301021}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6782880900095118718}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5816823195042006371}
+  m_SourcePrefab: {fileID: 100100000, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+--- !u!1 &6528326594142600506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1064b02ab42ace4a819244b690d3018, type: 3}
+  m_PrefabInstance: {fileID: 6221775262365237355}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
-  m_Mesh: {fileID: 4493585093827132993, guid: 5f3b083e61c372e4a8968ea7fedb911e, type: 3}
---- !u!23 &1198157436892343792
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 1877244072416195789, guid: 5f3b083e61c372e4a8968ea7fedb911e, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1594559282373364062
+--- !u!65 &724868656967471988
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
+  m_GameObject: {fileID: 6528326594142600506}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -109,15 +97,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0009977138, y: 0.00079487124, z: 0.0013419709}
-  m_Center: {x: 0, y: 1.4551913e-11, z: 0}
---- !u!54 &8457676020100349373
+  m_Size: {x: 0.0016186945, y: 0.0016186944, z: 0.00060176133}
+  m_Center: {x: 2.910383e-11, y: 5.820766e-11, z: 0}
+--- !u!54 &4067987021885301021
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
+  m_GameObject: {fileID: 6528326594142600506}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -138,13 +126,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5543176360117063772
+--- !u!114 &6782880900095118718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
+  m_GameObject: {fileID: 6528326594142600506}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -260,13 +248,13 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &5151936531290374961
+--- !u!114 &5816823195042006371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738420012077096723}
+  m_GameObject: {fileID: 6528326594142600506}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 000f443d614e8fc45bed81ba351d5285, type: 3}
@@ -275,8 +263,8 @@ MonoBehaviour:
   isMagnitizm: 0
   startImpulse: 0
   itemName: Pelmeni
-  isReady: 0
+  isReady: 1
   isOnConveyor: 0
   isOnMagnit: 0
   conveyorSpeed: 0
-  rb: {fileID: 8457676020100349373}
+  rb: {fileID: 4067987021885301021}
