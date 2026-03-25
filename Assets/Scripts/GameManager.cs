@@ -56,11 +56,11 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Игра окончена! Ваш счет: {score}");
             if (score/maxScore >=0.75f)
             {
-                Debug.Log("Отличный результат! Вы справились с задачей!");
+                maxScore_text.text = "Отличный результат! Вы справились с задачей!";
             }
             else
             {
-                Debug.Log("К сожалению, вы не достигли цели. Попробуйте снова!");
+                maxScore_text.text = "К сожалению, вы не достигли цели. Попробуйте снова!";
             }
                 enabled = false; // Остановить обновление GameManager
         }
