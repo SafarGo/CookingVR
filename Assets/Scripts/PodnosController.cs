@@ -12,7 +12,7 @@ public class PodnosController : MonoBehaviour
     private Dictionary<string, int> productsToComplete = new Dictionary<string, int>();
     private Dictionary<string, int> productsAdded = new Dictionary<string, int>();
     public int score;
-
+    public AudioSource putSound;
     public string GetName() => nameOfOrder;
     public int SetWeight(int value) { score = value; return score; }
     public bool GetIsReady() => isOrderReady;
@@ -60,6 +60,7 @@ public class PodnosController : MonoBehaviour
         {
             if (productsAdded[tag] < productsToComplete[tag] && other.GetComponent<BaseItem>().isReady)
             {
+                putSound.Play();
                 Debug.Log($"Added to podnos {tag}");
                 productsAdded[tag]++;
                 Destroy(other.gameObject);

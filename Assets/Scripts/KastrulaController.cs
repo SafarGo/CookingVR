@@ -20,6 +20,7 @@ public class KastrulaController : BaseItem
     public bool isReadyToBoil;
     private GameObject newObj;
     private string currentTag;
+    public AudioSource boilSound;
 
     protected override void OnTriggerEnter(Collider other)
     {
@@ -58,6 +59,7 @@ public class KastrulaController : BaseItem
     }
     IEnumerator Boil(GameObject other)
     {
+        boilSound.Play();
         if (isOnPlita && recipes.Any(r => r.inputTag == currentTag))
         {
             Destroy(other);
