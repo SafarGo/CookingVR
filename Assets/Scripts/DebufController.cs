@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DebufController : MonoBehaviour
 {
+    public AudioSource debafSound;
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Slicer"))
@@ -15,7 +16,9 @@ public class DebufController : MonoBehaviour
 
     IEnumerator DebugDelay()
     {
+        debafSound.Play();
         yield return new WaitForSeconds(6f);
         GameManager.instance.isDebaf = false;
+        debafSound.Stop();
     }
 }

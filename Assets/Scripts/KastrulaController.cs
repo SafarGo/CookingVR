@@ -78,5 +78,6 @@ public class KastrulaController : BaseItem
             newObj = null;
             currentTag = null;
         }
+        boilSound.Stop();
     }
 }
